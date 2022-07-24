@@ -2,20 +2,20 @@ name: Ruby
 
 on:
   push:
-    branches:
-      - master
-
+    branches: 
+      - main
   pull_request:
+    branches:
+      - '*'
 
 jobs:
-  build:
+  rspec:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}
+    name: RSpec ${{ matrix.ruby }}
     strategy:
       matrix:
         ruby:
           - '3.0.4'
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
@@ -24,4 +24,25 @@ jobs:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
     - name: Run the default task
-      run: bundle exec rake
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rspec
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+  rubocop:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby:
+          - '3.0.4'
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+    - name: Runs rubocop
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rspec
