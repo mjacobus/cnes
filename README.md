@@ -1,8 +1,7 @@
 # Cnes
 
-[![Build Status](https://github.com/mjacobus/cnes/actions/workflows/rails-unit-tests.yml/badge.svg)](https://github.com/mjacobus/cnes/actions/workflows/rails-unit-tests.yml?query=branch%3Amaster)
-[![Rubocop](https://github.com/mjacobus/cnes/actions/workflows/rubocop.yml/badge.svg)](https://github.com/mjacobus/cnes/actions/workflows/rubocop.yml?query=branch%3Amaster)
-[![Maintainability](https://api.codeclimate.com/v1/badges/65fad0b0ff0bed478231/maintainability)](https://codeclimate.com/github/mjacobus/cnes/maintainability)
+[![Ruby](https://github.com/mjacobus/cnes/actions/workflows/main.yml/badge.svg)](https://github.com/mjacobus/cnes/actions/workflows/main.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/34d8d7c160ea1a9946ce/maintainability)](https://codeclimate.com/github/mjacobus/cnes/maintainability)
 [![Coverage Status](https://coveralls.io/repos/github/mjacobus/cnes/badge.svg?branch=main)](https://coveralls.io/github/mjacobus/cnes?branch=main)
 
 ## Installation
