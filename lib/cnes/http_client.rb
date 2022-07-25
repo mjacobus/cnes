@@ -32,6 +32,10 @@ module Cnes
       @dados_abertos.get("/cnes/tipounidades/#{id}")
     end
 
+    def profissionais(id)
+      @cnes.get("/services/estabelecimentos-profissionais/#{id}")
+    end
+
     private
 
     def params(params, default_params = {})

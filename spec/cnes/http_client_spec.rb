@@ -28,4 +28,31 @@ RSpec.describe Cnes::HttpClient do
 
     expect(data['descricao_tipo_unidade']).to eq('LABORATORIO DE SAUDE PUBLICA')
   end
+
+  describe '#profissionais' do
+    it 'busca todos os profissionais por id do estabelecimento' do
+      data = client.profissionais('4314902237253')
+
+      expect(data.first.keys).to eq(
+        %w[
+          tpSusNaoSus
+          cbo
+          dsCbo
+          chOutros
+          chAmb
+          chHosp
+          vinculacao
+          vinculo
+          subVinculo
+          nome
+          cns
+          cnsMaster
+          artigo2
+          artigo3
+          artigo5
+          dtEntrada
+        ]
+      )
+    end
+  end
 end
