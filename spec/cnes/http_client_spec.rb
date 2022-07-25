@@ -5,19 +5,21 @@ require 'spec_helper'
 RSpec.describe Cnes::HttpClient do
   let(:client) { Cnes::HttpClientFactory.new.create }
 
-  it 'busca estabelecimentos' do
-    VCR.use_cassette('estabelecimentos') do
-      data = client.estabelecimentos
-
-      expect(data['estabelecimentos'].length).to eq(20)
-    end
-  end
-
   it 'busca estabelecimento by cnes' do
     VCR.use_cassette('estabelecimentos/169993') do
       data = client.estabelecimento(16_993)
 
       expect(data['numero_cnpj_entidade']).to eq('76417005000186')
+    end
+  end
+
+  it 'busca estabelecimentos por nome e cidade' do
+    VCR.use_cassette('estabelecimentos_por_cidade_e_nome') do
+      data = client.estabelecimentos(nome: 'SANTA CASA', municipio: 431_490)
+
+      expect(data.first['noFantasia']).to eq(
+        'IRMANDADE DA SANTA CASA DE MISERICORDIA DE PORTO ALEGRE'
+      )
     end
   end
 

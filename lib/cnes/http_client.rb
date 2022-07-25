@@ -10,14 +10,13 @@ module Cnes
     def estabelecimentos(params = {})
       params = params(
         params,
-        codigo_tipo_unidade: nil,
-        estabelecimento_possui_centro_cirurgico: nil,
-        estabelecimento_possui_centro_obstetrico: nil,
+        municipio: nil,
+        nome: nil,
         limit: 20,
         offset: 0
       )
 
-      @dados_abertos.get('/cnes/estabelecimentos', params)
+      @cnes.get('/services/estabelecimentos', params)
     end
 
     def estabelecimento(cnes_id)
