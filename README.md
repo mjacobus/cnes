@@ -16,7 +16,18 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+
+```ruby
+require "cnes"
+
+profissionais = Cnes::Servicos::ProfissionaisFactory.new.create
+
+resultados = profissionais.listar(
+  estado: 'RIO GRANDE DO SUL',
+  cidade: 'PORTO ALEGRE',
+  estabelecimento: 'SANTA CASA'
+)
+```
 
 ## Development
 
