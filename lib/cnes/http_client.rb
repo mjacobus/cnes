@@ -24,6 +24,14 @@ module Cnes
       @dados_abertos.get("/cnes/estabelecimentos/#{cnes_id}")
     end
 
+    def tipos_de_unidades
+      @dados_abertos.get('/cnes/tipounidades')
+    end
+
+    def tipo_de_unidade(id)
+      @dados_abertos.get("/cnes/tipounidades/#{id}")
+    end
+
     private
 
     def params(params, default_params = {})
