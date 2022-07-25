@@ -37,6 +37,22 @@ RSpec.describe Cnes::HttpClient do
     end
   end
 
+  it 'busca estados' do
+    VCR.use_cassette('estados') do
+      data = client.estados
+
+      expect(data['43']).to eq('RIO GRANDE DO SUL')
+    end
+  end
+
+  it 'busca cidades' do
+    VCR.use_cassette('cidades') do
+      data = client.cidades(43)
+
+      expect(data['431490']).to eq('PORTO ALEGRE')
+    end
+  end
+
   describe '#profissionais' do
     it 'busca todos os profissionais por id do estabelecimento' do
       VCR.use_cassette('profissionais/4314902237253') do
