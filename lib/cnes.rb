@@ -9,5 +9,6 @@ require_relative 'cnes/servicos/profissionais_factory'
 
 module Cnes
   class Error < StandardError; end
+  class InvalidArgumentError < Error; end
   # Your code goes here...
 end
