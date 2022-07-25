@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://apidadosabertos.saude.gov.br/cnes/tipounidades/80
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 00:44:28 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '86'
+      Set-Cookie:
+      - BIGipServerapi-dados-abertos_prod=4177534380.34835.0000; path=/; Httponly;
+        Secure
+      - TS0178494f=01f6470b2ffb7cb3e3f1ce65824fd37fa40e24138958572742206319ff26735dd58b3a193f9241e073be745d779fb5ea0e5db6287c675bf19c18360a6c6828299de4f29e38;
+        Path=/
+    body:
+      encoding: UTF-8
+      string: '{"codigo_tipo_unidade": 80, "descricao_tipo_unidade": "LABORATORIO
+        DE SAUDE PUBLICA"}
+
+        '
+  recorded_at: Mon, 25 Jul 2022 00:44:32 GMT
+recorded_with: VCR 6.1.0
