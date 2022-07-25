@@ -36,6 +36,14 @@ module Cnes
       @cnes.get("/services/estabelecimentos-profissionais/#{id}")
     end
 
+    def estados
+      @cnes.get('/services/estados')
+    end
+
+    def cidades(estado_id)
+      @cnes.get('/services/municipios', estado: estado_id)
+    end
+
     private
 
     def params(params, default_params = {})

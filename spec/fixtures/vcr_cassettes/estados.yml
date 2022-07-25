@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://cnes.datasus.gov.br/services/estados
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Referer:
+      - http://cnes.datasus.gov.br
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 00:49:55 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - SESSION=!UXmZ8Ba+E3wB3MJMV46LpvWpmPicw9ktUqY+B4alBdxf0uj4ajDSQHdeVz1X5rZmw7M7Itmuf/mS3vk=;
+        path=/; Httponly
+      - TS0142589a=0121427f935a262f58cb19afce037870b0f5bdc75d82a978e625294e0f379ce82da94e6b15a603a5a95b2ee45a068bcb2b4955b3a41d4fbb62d926615da12b36f222a23a9c;
+        Path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"12":"ACRE","27":"ALAGOAS","16":"AMAPA","13":"AMAZONAS","29":"BAHIA","23":"CEARA","53":"DISTRITO
+        FEDERAL","32":"ESPIRITO SANTO","52":"GOIAS","21":"MARANHAO","51":"MATO GROSSO","50":"MATO
+        GROSSO DO SUL","31":"MINAS GERAIS","15":"PARA","25":"PARAIBA","41":"PARANA","26":"PERNAMBUCO","22":"PIAUI","33":"RIO
+        DE JANEIRO","24":"RIO GRANDE DO NORTE","43":"RIO GRANDE DO SUL","11":"RONDONIA","14":"RORAIMA","42":"SANTA
+        CATARINA","35":"SAO PAULO","28":"SERGIPE","17":"TOCANTINS"}'
+  recorded_at: Mon, 25 Jul 2022 00:49:55 GMT
+recorded_with: VCR 6.1.0
