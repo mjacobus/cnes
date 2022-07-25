@@ -24,6 +24,15 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+## Links úteis
+
+- https://dados.gov.br/dataset/cadastro-nacional-de-estabelecimentos-de-saude-cnes1
+- API
+  - [Tipos de Unidades](https://apidadosabertos.saude.gov.br/cnes/tipounidades)
+  - [Tipos de Unidade](https://apidadosabertos.saude.gov.br/cnes/tipounidades/80)
+  - [Estabelecimentos](https://apidadosabertos.saude.gov.br/cnes/estabelecimentos?codigo_tipo_unidade=80&estabelecimento_possui_centro_cirurgico=0&estabelecimento_possui_centro_obstetrico=0&limit=20&offset=2)
+  - [Estabelecimento pelo código CNES](https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/124)
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/mjacobus/cnes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/mjacobus/cnes/blob/main/CODE_OF_CONDUCT.md).
