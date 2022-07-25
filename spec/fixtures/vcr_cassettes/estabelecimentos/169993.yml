@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/16993
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 00:44:28 GMT
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1582'
+      Set-Cookie:
+      - BIGipServerapi-dados-abertos_prod=4177534380.34835.0000; path=/; Httponly;
+        Secure
+      - TS0178494f=01f6470b2fb1d270fb5ee1c8a0033c1d76a3b715ed8eb50884fbb0ff3b20c6c5438e38a59edd908957f2d6cc2db4ba5a8b46c22e81b4cfaa088ea410820bd99f36c002da3d;
+        Path=/
+    body:
+      encoding: UTF-8
+      string: '{"codigo_cnes": 16993, "numero_cnpj_entidade": "76417005000186", "nome_razao_social":
+        "MUNICIPIO DE CURITIBA", "nome_fantasia": "UMS SAO JOAO DEL REY PSF", "natureza_organizacao_entidade":
+        null, "tipo_gestao": "M", "descricao_nivel_hierarquia": null, "descricao_esfera_administrativa":
+        null, "codigo_tipo_unidade": 2, "codigo_cep_estabelecimento": "81900100",
+        "endereco_estabelecimento": "RUA REALEZA", "numero_estabelecimento": "259",
+        "bairro_estabelecimento": "SITIO CERCADO", "numero_telefone_estabelecimento":
+        "3227-4061", "latitude_estabelecimento_decimo_grau": -25.5376626, "longitude_estabelecimento_decimo_grau":
+        -49.2732444, "endereco_email_estabelecimento": "andrmoreira@sms.curitiba.pr.gov.br",
+        "numero_cnpj": null, "codigo_identificador_turno_atendimento": "04", "descricao_turno_atendimento":
+        "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE", "estabelecimento_faz_atendimento_ambulatorial_sus":
+        "SIM", "codigo_estabelecimento_saude": "4106900016993", "codigo_uf": 41, "codigo_ibge_municipio":
+        410690, "descricao_natureza_juridica_estabelecimento": "1244", "codigo_motivo_desabilitacao_estabelecimento":
+        null, "estabelecimento_possui_centro_cirurgico": 0, "estabelecimento_possui_centro_obstetrico":
+        0, "estabelecimento_possui_centro_neonatal": 0, "estabelecimento_possui_atendimento_hospitalar":
+        0, "estabelecimento_possui_servico_apoio": 1, "estabelecimento_possui_atendimento_ambulatorial":
+        0, "codigo_atividade_ensino_unidade": "04", "codigo_natureza_organizacao_unidade":
+        null, "codigo_nivel_hierarquia_unidade": null, "codigo_esfera_administrativa_unidade":
+        null}
+
+        '
+  recorded_at: Mon, 25 Jul 2022 00:44:32 GMT
+recorded_with: VCR 6.1.0
